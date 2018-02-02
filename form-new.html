@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create New Title</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+		
+		<!-- Ingram Theme -->
+		<link rel="stylesheet" href="css/ingram-bootstrap-theme.css">
+		
+		<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+		
+		<!-- FontAwesome -->
+		<link rel="stylesheet" href="css/fa-svg-with-js.css">
+		<script type="text/javascript" src="js/fontawesome-all.js"></script>
+		
+	</head>
+	
+	<body>
+		<div class="container">
+		
+			<div class="row">
+			<!-- Page Header -->
+			<header class="col-12 my-4">
+				<h1 class="text-info">Page Header</h1>
+				<p>This is a header subtitle.</p>
+				<p><span class="text-danger pr-2">* Required fields </span> <span class="text-info">* Recommended fields</span></p>
+			</header>
+			</div>
+			
+			<form class="mb-4" action="" id="needs-validation" novalidate>
+				
+				<!-- Section Header -->
+				<div class="row">
+				<header class="col-12">
+					<h3 class="text-info">Select fields</h3>
+					<p>Here goes the description for this section.</p>
+				</header>
+				</div>
+				
+				<!-- Select fields -->
+				<div class="row mb-4 border border-top-0 border-left-0 border-right-0 pb-4">
+					
+					<!-- Required -->
+					<fieldset class="form-group col-12 col-md-6">
+						<label for="FormControlSelectRequired">
+							<span class="text-danger">*</span> Required select
+						</label>
+						<select class="form-control" id="FormControlSelectRequired" required>
+							<option disabled selected value> Select an option</option>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+						</select>
+						<div class="invalid-feedback">This is a required field. Please select an option from the list.</div>
+					</fieldset>
+
+					<!-- Recommended -->
+					<fieldset class="form-group col-12 col-md-6">
+						<label for="FormControlSelectRecommended">
+							<span class="text-info">*</span>
+							Recommended select
+						</label>
+						<select class="form-control" id="FormControlSelectRecommended">
+							<option disabled selected value>Select a recommended option</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+							<option>Option 4</option>
+						</select>
+					</fieldset>
+					
+					<!-- Disabled -->
+					<fieldset class="form-group col-12 col-md-6" disabled>
+						<label for="FormControlSelectDisabled">
+							<span class="text-danger">*</span> Disabled select
+						</label>
+						<select class="form-control" id="FormControlSelectDisabled" required>
+							<option disabled selected value>Select an option</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+							<option>Option 4</option>
+						</select>
+					</fieldset>
+					
+					<!-- Date picker -->
+					<fieldset class="form-group col-12 col-md-6 required-field">
+						<label for="datepicker">
+							<span class="text-danger">*</span>
+							Datepicker
+						</label>
+						<div class="input-group">
+							<input id="datepicker" class="form-control" placeholder="dd-mm-yyyy"
+										 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" required>
+							<button class="input-group-addon" (click)="d.toggle()" type="button">
+								<i class="far fa-calendar"></i>
+							</button>
+						</div>
+					</fieldset>
+					
+				</div>
+				<!-- End of selects -->
+				
+				
+				<!-- Section header -->
+				<div class="row">
+					<header class=" col-12">
+					<h3 class="text-info">Text Inputs</h3>
+				</header>
+				</div>
+
+				<!-- Text input fields -->
+				<div class="row mb-4 border border-top-0 border-left-0 border-right-0 pb-4">
+					
+					<!-- Required text field -->
+					<fieldset class="form-group col-12 col-md-6">
+						<label for="RequiredTextField">
+							<span class="text-danger">*</span> Required text field
+						</label>
+						<input type="text" class="form-control" id="RequiredTextField" placeholder="Enter yout text here" required>
+						<div class="invalid-feedback">This is a required field.</div>
+					</fieldset>
+
+					<!-- Recommended text field -->
+					<fieldset class="form-group col-12 col-md-6 recommended-field">
+						<label for="RecommendedTextField">
+							<span class="text-info">*</span> Recommended text field
+						</label>
+						<input type="text" class="form-control" id="RecommendedTextField" placeholder="Enter yout text here">
+					</fieldset>
+					
+					<!-- Disabled text field -->
+					<fieldset class="form-group col-12 col-md-6 recommended-field">
+						<label for="DisabledTextField">
+							<span class="text-info">*</span> Disabled text field
+						</label>
+						<input type="text" class="form-control" id="DisabledTextField" placeholder="Enter yout text here" disabled>
+					</fieldset>
+					
+					<!-- Text field with Helptext-->
+					<fieldset class="form-group col-12 col-md-6 required-field">
+						<label for="RequiredTextField">
+							<span class="text-danger">*</span> Required text field with Helptext
+						</label>
+						<input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Enter yout text here" required>
+						<small id="textHelp" class="text-muted">
+							<i class="fas fa-info-circle icon"></i> Helptext goes here...</small>	
+					</fieldset>
+				
+				</div>
+				<!-- End of text inputs -->
+				
+				
+				<!-- Section Header -->
+				<div class="row">
+					<header class="form-section-header col-12">
+					<h3 class="text-info">Multiple Input field</h3>
+				</header>
+				</div>
+				
+				<!-- ISBN custom -->
+				<div class="row mb-4 border border-top-0 border-left-0 border-right-0 pb-4">
+
+					<div class="form-row col-12 col-md-6">
+						
+						<!-- ISBN prefix -->
+						<fieldset class="form-isbn-prefix col-6 col-md-6">
+							<label for="ISBNprefix">
+								<span class="text-danger">*</span> ISBN
+							</label>
+							<select class="form-control" id="ISBNprefix" required>
+								<option disabled selected value> Select an ISBN prefix</option>
+								<option>980000</option>
+								<option>9800000</option>
+								<option>98000000</option>
+							</select>
+							<div class="invalid-feedback">ISBN number is required. Please select an option.</div>
+						</fieldset>
+						
+						<!-- ISBN digits -->
+						<fieldset class="form-isbn-add col-6 col-md-6">
+							<label for="ISBNadd">
+								<span class="text-danger">*</span> ISBN additional digits
+							</label>
+							<input type="number" class="form-control" id="ISBNadd" placeholder="Enter aditional digits" required>
+							<div class="invalid-feedback">ISBN additional digits number is required. Please enter a number.</div>
+						</fieldset>	
+						
+						<!-- ISBN checkbox -->
+						<fieldset class="form-check col-12 my-2 pl-4">
+							<input class="form-check-input" type="checkbox" id="defaultCheck1" checked>
+							<label class="form-check-label" for="defaultCheck1">Use my ISBN Number as Title Group ID</label>
+
+							<a href="#" class="form-isbn-check-info" data-toggle="tooltip" title="Some tooltip text!">
+								<i class="fas fa-question-circle icon"></i>
+							</a>
+						</fieldset>
+						
+					</div>
+				</div>
+				<!-- ISBN custom ends here -->
+				
+				
+				<!-- Section Header -->
+				<div class="row">
+					<header class="form-section-header col-12">
+					<h3 class="text-info">Table</h3>
+				</header>
+				</div>
+				
+				<!-- Table -->
+				<div class="row mb-4 border border-top-0 border-left-0 border-right-0 pb-4">
+						
+						<div class="col-12">
+							<table class="table table-striped">
+								
+								<!-- Table Head -->
+								<thead>
+									<tr>
+										<th scope="col">First Column</th>
+										<th scope="col">Second Column</th>
+										<th scope="col" class="">
+											<i class="far fa-trash-alt mx-auto d-block"></i>
+										</th>
+									</tr>
+								</thead>
+								
+								<!-- Table Body -->
+								<tbody>
+									
+									<!-- First row -->
+									<tr>
+										<td class="">
+												<div class="form-group float-left col-6 mb-0 pl-0">
+													<select class="form-control" id="ISBNprefix">
+														<option disabled selected value>Select a Season</option>
+														<option>980000</option>
+														<option>9800000</option>
+														<option>98000000</option>
+													</select>
+												</div>
+												
+												<div class="form-group float-left col-4 mb-0">
+													<select class="form-control" id="ISBNprefix">
+													<option disabled selected value> Year</option>
+													<option>980000</option>
+													<option>9800000</option>
+													<option>98000000</option>
+													</select>	
+												</div>
+												
+									</td>
+										<td class="">
+											<div class="form-group mb-0">
+												<select class="form-control" id="exampleFormControlSelect1" disabled>
+												<option disabled selected value>Select a Catalog Type</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+											</select>
+											</div>
+										</td>
+										<td>
+											<button type="button" class="btn btn-light mx-auto d-block">
+												<i class="far fa-trash-alt"></i>
+												
+											</button>
+										</td>
+									</tr>
+									
+									<!-- Second row -->
+									<tr class="table-danger">
+										<td class="">
+												<div class="form-group float-left col-6 mb-0 pl-0">
+													<select class="form-control" id="ISBNprefix">
+														<option disabled selected value>Select a Season</option>
+														<option>980000</option>
+														<option>9800000</option>
+														<option>98000000</option>
+													</select>
+												</div>
+												
+												<div class="form-group float-left col-4 mb-0">
+													<select class="form-control" id="ISBNprefix">
+													<option disabled selected value> Year</option>
+													<option>980000</option>
+													<option>9800000</option>
+													<option>98000000</option>
+													</select>	
+												</div>
+									</td>
+										<td class="">
+											<div class="form-group mb-0">
+												<select class="form-control" id="exampleFormControlSelect1" disabled>
+												<option disabled selected value>Select a Catalog Type</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+											</select>
+											</div>
+											
+										</td>
+										<td>
+											<button type="button" class="btn btn-light mx-auto d-block">
+												<i class="far fa-trash-alt"></i>
+												
+											</button>
+										</td>
+									</tr>
+									
+									<!-- Third row -->
+									<tr>
+										<td colspan="3">
+											<a href="#" class="text-info">
+											<i class="fas fa-plus-circle"></i>
+											Add additional row</a>
+										</td>
+										
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+					
+				<!-- Buttons -->
+				<button class="btn btn-info btn-md mr-2" type="submit">Submit form - active</button>
+				<button class="btn btn-info btn-md mr-2" type="submit" disabled>Submit form - disabled</button>
+				
+			</form>
+			
+		</div>
+		
+		<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+		</script>
+			
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function() {
+				'use strict';
+
+				window.addEventListener('load', function() {
+					var form = document.getElementById('needs-validation');
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					}, false);
+				}, false);
+			})();
+			</script>
+	</body>
+	
+</html>

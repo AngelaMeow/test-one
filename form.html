@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create New Title</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/ingram-bootstrap-theme.css">
+		<link rel="stylesheet" href="css/ui-references.css">
+		<link rel="stylesheet" href="css/fa-svg-with-js.css">
+		<script type="text/javascript" src="js/fontawesome-all.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+		
+	</head>
+	<body>
+		<div class="container ross-theme">
+		
+			<div class="row">
+			<header class="form-header col-12">
+				<h2>Form Header</h2>
+				<p>This is a header subtitle.</p>
+				<div class=""><span class="identifier identifier--required"></span>Required fields</div>
+				<div class=""><span class="identifier identifier--recommended"></span>Recommended field</div>
+			</header>
+			</div>
+			
+			<form action="" id="needs-validation" novalidate>
+				
+				<div class="container form-section">
+					<div class="row">
+					<header class="form-section-header col-12">
+						<h3 class="form-section-title">
+						<i class="icon fas fa-suitcase"></i>Form Section Header
+						</h3>
+						<p>This is an example of form section Header</p>
+					</header>
+					</div>
+				</div>
+				
+				<div class="container form-section">
+					
+					<div class="row">
+					<header class="form-section-header col-12">
+						<h3 class="form-section-title">Select fields &amp; datepicker</h3>
+					</header>
+					</div>
+					
+					<div class="row">
+						<div class="form-group col-12 col-md-6 required-field">
+							<label for="exampleFormControlSelect1">Required select field</label>
+							<span class="identifier identifier--required"></span>
+							<select class="form-control" id="exampleFormControlSelect1">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+								<option>Option 4</option>
+							</select>
+						</div>
+					
+						<div class="form-group col-12 col-md-6">
+							<label for="exampleFormControlSelect2">Recommended select field</label>
+							<span class="identifier identifier--recommended"></span>
+							<select class="form-control" id="exampleFormControlSelect2">
+								<option>Groove Atlantic</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+								<option>Option 4</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="row">
+					
+						<div class="form-group col-12 col-md-6">
+							<label for="exampleFormControlSelect2">Recommended select field - disabled</label>
+							<span class="identifier identifier--recommended"></span>
+							<select class="form-control" id="exampleFormControlSelect2" disabled>
+								<option>Groove Atlantic</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+								<option>Option 4</option>
+							</select>
+						</div>
+						
+						<div class="form-group col-12 col-md-6 required-field">
+							<label for="datepicker">Required datepicker field</label>
+							<span class="identifier identifier--required"></span>
+							<div class="input-group">
+								<input id="datepicker" class="form-control" placeholder="dd-mm-yyyy"
+											 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+								<button class="input-group-addon" (click)="d.toggle()" type="button">
+									<i class="far fa-calendar"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				
+				<div class="container form-section">
+					<div class="row">
+						<header class="form-section-header col-12">
+						<h3 class="form-section-title">Text Input Examples</h3>
+					</header>
+					</div>
+					
+					<div class="row">
+					
+						<div class="form-group col-12 col-md-6 required-field">
+							<label for="RequiredTextField">Required text field</label>
+							<span class="identifier identifier--required"></span>
+							<input type="text" class="form-control" id="RequiredTextField" aria-describedby="emailHelp" placeholder="Enter yout text here">
+						</div>
+
+						<div class="form-group col-12 col-md-6 recommended-field">
+							<label for="RecommendedTextField">Recommended text field</label>
+							<span class="identifier identifier--recommended"></span>
+							<input type="text" class="form-control" id="RecommendedTextField" aria-describedby="emailHelp" placeholder="Enter yout text here">
+						</div>
+						
+					</div>
+					
+					<div class="row">
+					
+					<div class="form-group col-12 col-md-6 required-field">
+						<label for="exampleInputText1">Required text field with Helptext </label>
+						<span class="identifier identifier--required"></span>
+						<input type="text" class="form-control" id="exampleInputText1" aria-describedby="textHelp" placeholder="Enter yout text here">
+						<small id="textHelp" class="form-text text-muted">
+							<i class="fas fa-info-circle icon"></i>This is the helptext</small>
+					</div>
+					
+					<div class="form-group col-12 col-md-6 required-field">
+						<label for="exampleInputTextdisabled">Required text field disabled </label>
+						<span class="identifier identifier--required"></span>
+						<input type="text" class="form-control" id="exampleInputTextdisabled" aria-describedby="textHelp" placeholder="Enter yout text here" disabled>
+					</div>
+						
+					</div>
+					
+				</div>
+				
+				<div class="container form-section">
+					<div class="row">
+						<header class="form-section-header col-12">
+						<h3 class="form-section-title">Multiple Input in a column</h3>
+					</header>
+					</div>
+					
+					<div class="row">
+						
+						<div class="form-row form-row-isbn col-12 col-md-6 align-items-center">
+						
+						<div class="form-isbn-prefix col-6 col-md-6">
+							<label for="ISBNprefix">Multiple field example</label>
+							<label class="sr-only" for="inlineFormInput">Input1</label>
+							<span class="identifier identifier--required"></span>
+							<select class="form-control" id="ISBNprefix">
+								<option>98000</option>
+								<option>980000</option>
+								<option>9800000</option>
+								<option>98000000</option>
+							</select>
+						</div>
+						<div class="form-isbn-add col-6 col-md-6">
+							<label class="sr-only" for="inlineFormInputGroup">Input2</label>
+							<span class="identifier identifier--required"></span>
+							<input type="number" class="form-control" id="ISBNadd" placeholder="Enter aditional numbers">
+						</div>
+						
+						<div class="col-12">
+						<div class="form-check form-isbn-check">
+							<label class="form-check-label">
+								<input class="form-check-input" type="checkbox"> Use my ISBN Number as Title Group ID
+							</label>
+							
+							<a href="#" class="form-isbn-check-info" data-toggle="tooltip" title="Some tooltip text!">
+								<i class="fas fa-question-circle icon"></i>
+							</a>
+
+						</div>
+					</div>
+						
+					</div>
+					
+						
+					</div>
+						
+				</div>
+				
+				<div class="container form-section">
+					<div class="row">
+						<header class="form-section-header col-12">
+						<h3 class="form-section-title">Table form example</h3>
+					</header>
+					</div>
+					
+					<div class="row">
+						
+						<div class="col-12">
+							<table class="table table-striped form-table">
+								<thead>
+									<tr>
+										<th scope="col">First Column</th>
+										<th scope="col">Second Column</th>
+										<th scope="col" class="small-col">
+											<i class="far fa-trash-alt"></i>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="form-row">
+												<select class="form-control form-table-input-inline" id="ISBNprefix">
+													<option>Select an option</option>
+													<option>980000</option>
+													<option>9800000</option>
+													<option>98000000</option>
+												</select>
+												<select class="form-control form-table-input-inline" id="ISBNprefix">
+													<option>Select an option</option>
+													<option>980000</option>
+													<option>9800000</option>
+													<option>98000000</option>
+												</select>
+									</td>
+										<td class="form-row-2">
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>Option 1</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+											</select>
+										</td>
+										<td>
+											<button type="button" class="btn btn-light">
+												<i class="far fa-trash-alt"></i>
+												
+											</button>
+										</td>
+									</tr>
+									<tr class="table-danger">
+										<td class="form-row">
+												<select class="form-control form-table-input-inline" id="ISBNprefix">
+													<option>Select an option</option>
+													<option>980000</option>
+													<option>9800000</option>
+													<option>98000000</option>
+												</select>
+												<select class="form-control form-table-input-inline" id="ISBNprefix">
+													<option>Select an option</option>
+													<option>980000</option>
+													<option>9800000</option>
+													<option>98000000</option>
+												</select>
+									</td>
+										<td class="form-row-2">
+											<select class="form-control" id="exampleFormControlSelect1" disabled>
+												<option>Option 1</option>
+												<option>Option 2</option>
+												<option>Option 3</option>
+												<option>Option 4</option>
+											</select>
+										</td>
+										<td>
+											<button type="button" class="btn btn-light">
+												<i class="far fa-trash-alt"></i>
+												
+											</button>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<a href="#">
+											<i class="fas fa-plus-circle"></i>
+											Add additional row</a>
+										</td>
+										
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+
+				</div>
+				
+				<div class="container form-section">
+					<div class="row">
+						<header class="form-section-header col-12">
+						<h3 class="form-section-title">Iconography</h3>
+						<p>FontAwesome (Included as SVG with JS)</p>
+					</header>
+					</div>
+					
+					<div class="row">
+						
+						<div class="col-12">
+							
+							<h2><i class="icon fas fa-suitcase"></i></h2>
+							<h2><i class="icon fas fa-book"></i></h2>
+							<h2><i class="icon fas fa-folder-open"></i></h2>
+							<h2><i class="icon fas fa-tag"></i></h2>
+							<h2><i class="icon fas fa-info-circle"></i></h2>
+							<h2><i class="icon fas fa-question-circle"></i></h2>
+							<h2><i class="icon far fa-calendar"></i></h2>
+							<h2><i class="icon far fa-trash-alt"></i></h2>
+							
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="container form-section">
+					<div class="row">
+						<header class="form-section-header col-12">
+						<h3 class="form-section-title">Error Messages</h3>
+					</header>
+					</div>
+					
+					<div class="row">
+						
+						<div class="form-group col-12 col-md-6 required-field">
+							<span class="identifier identifier--required"></span>
+							<label for="validationCustom03">Required text field</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+							<div class="invalid-feedback">
+								Please provide a valid text.
+							</div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+				
+				<button class="btn btn-primary btn-lg form-button" type="submit">Submit form - active</button>
+				<button class="btn btn-primary btn-lg form-button" type="submit" disabled>Submit form - disabled</button>
+				
+			</form>
+			
+			<div class="row">
+				<header class="form-header col-12">
+					<h2>Success Alert</h2>
+				</header>
+				<div class="alert alert-success" role="alert">
+					This is a success alert.
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+		</script>
+			
+		<script>
+			// Example starter JavaScript for disabling form submissions if there are invalid fields
+			(function() {
+				'use strict';
+
+				window.addEventListener('load', function() {
+					var form = document.getElementById('needs-validation');
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+							event.preventDefault();
+							event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+					}, false);
+				}, false);
+			})();
+			</script>
+	</body>
+	
+</html>
